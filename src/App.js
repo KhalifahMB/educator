@@ -1,11 +1,5 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import Navbar from "./components/Navbar";
-// import Header from "./components/Header";
-// import Categories from "./components/Categories";
-// import Footer from "./components/Footer";
-// import Faqs from "./components/Faqs";
-// import Testimonials from "./components/Testimonials";
 import Main from "./pages/Main";
 import About from "./pages/About";
 import Courses from "./pages/Courses";

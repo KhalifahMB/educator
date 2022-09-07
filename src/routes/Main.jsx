@@ -9,10 +9,18 @@ import Footer from "../components/Footer";
 import { Outlet } from "react-router-dom";
 
 const Main = (props) => {
+  console.log("props main", props);
+  //  categories
   const [categories, setCategories] = React.useState([]);
   React.useEffect(() => {
     setCategories(props.category);
   }, [props.category]);
+
+  // testimonials
+  const [testimonials, setTestimonials] = React.useState([]);
+  React.useEffect(() => {
+    setTestimonials(props.testimonial);
+  }, [props.testimonial]);
 
   return (
     <>
@@ -21,7 +29,7 @@ const Main = (props) => {
       <Categories category={categories} />
       <Courses />
       <Faqs />
-      <Testimonials />
+      <Testimonials testimonial={testimonials} />
       <Footer />
       <Outlet />
     </>

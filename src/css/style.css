@@ -76,8 +76,6 @@ h4 {
 
 a {
   color: var(--color-white);
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 img {

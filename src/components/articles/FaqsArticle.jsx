@@ -1,6 +1,6 @@
 import { useState } from "react";
 const FaqsArticle = (props) => {
-  const { heading, body, id } = props;
+  const { heading, body } = props;
   const [faqsExpand, setFaqsExpand] = useState(false);
   const styles = {
     display: faqsExpand ? "block" : "none",

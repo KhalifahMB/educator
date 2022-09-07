@@ -12,13 +12,13 @@ const TeamArticles = (props) => {
       </div>
       <div className="team_member-socials">
         <a href="#" targert="_blank">
-          <i className="fa-brands fa-instagram"></i>
+          <i className="bi bi-instagram"></i>
         </a>
         <a href="#" targert="_blank">
-          <i className="fa-brands fa-twitter"></i>
+          <i className="bi bi-twitter"></i>
         </a>
         <a href="#" targert="_blank">
-          <i className="fa-brands fa-linkedin"></i>
+          <i className="bi bi-linkedin"></i>
         </a>
       </div>
     </article>

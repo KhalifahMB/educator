@@ -1,31 +1,45 @@
+/* eslint-disable no-unused-vars */
+
+// former codes
 import { Outlet, Link } from "react-router-dom";
-import { useState } from "react";
-
+import React, { useState, useEffect } from "react";
 const Navbar = () => {
-  const [navExpand, setNavExpand] = useState(true);
+  const [toggleMenu, setToggleMenu] = useState(false);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
-  const styles = {
-    display: navExpand ? "none" : "flex",
+  const toggleNav = () => {
+    setToggleMenu(!toggleMenu);
   };
+  const styles = {
+    display: "flex",
+  };
+  useEffect(() => {
+    console.log(screenWidth);
+    const changeWidth = () => {
+      setScreenWidth(window.innerWidth);
+    };
 
-  function handleClick() {
-    console.log("navclick", navExpand);
-    setNavExpand((prev) => {
-      return !navExpand;
-    });
-  }
+    window.addEventListener("resize", changeWidth);
+
+    return () => {
+      window.removeEventListener("resize", changeWidth);
+    };
+  }, [screenWidth]);
 
   return (
     <nav>
-      {
-        <div className="container nav_container">
-          <Link to="main">
-            <h4>EL-KUFAHN </h4>
-          </Link>
+      <div className="container nav_container">
+        <Link to="main">
+          <h4>EL-KUFAHN </h4>
+        </Link>
 
-          <ul className={`nav_menu`} style={styles}>
+        {(toggleMenu || screenWidth > 500) && (
+          <ul
+            style={styles}
+            className={`nav_menu ${toggleMenu ? "expand" : "nav_menu"}`}
+          >
             <li>
-              <Link to="/main">Home</Link>
+              <Link to="/">Home</Link>
             </li>
             <li>
               <Link to="/about">About</Link>
@@ -37,15 +51,15 @@ const Navbar = () => {
               <Link to="/contacts">Contact</Link>
             </li>
           </ul>
-
-          <button id="open-menu-btn" onClick={handleClick}>
-            <i className={navExpand ? "bi bi-list" : "bi bi-asterisk"}></i>
-          </button>
-          {/* <button id="close-menu-btn">
+        )}
+        <button id="open-menu-btn" onClick={toggleNav}>
+          <i className={toggleMenu ? "bi bi-asterisk" : "bi bi-list"}></i>
+        </button>
+        {/* <button id="close-menu-btn">
             <i className="bi bi-plus"></i>
           </button> */}
-        </div>
-      }
+      </div>
+
       <Outlet />
     </nav>
   );

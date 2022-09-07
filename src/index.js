@@ -7,6 +7,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import "./css/style.css";
 import "./css/about.css";
 import "./css/contact.css";
+import "./css/courses.css";
 // import './css/'
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

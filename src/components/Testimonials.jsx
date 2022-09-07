@@ -10,7 +10,7 @@ const Testimonials = (props) => {
   const element = props.testimonial;
   const elements = element.map((el) => {
     return (
-      <SwiperSlide ke>
+      <SwiperSlide key={el.id}>
         <article className="testimonial swiper-slide">
           <div className="avatar">
             <img src={el.src} alt="" />

@@ -19,16 +19,15 @@ const Contacts = () => {
             </p>
             <ul className="contact_details">
               <li>
-                {" "}
-                <i className="fa-solid fa-user"></i>
+                <i className="bi bi-people"></i>
                 <h5>+2348025378443</h5>
               </li>
               <li>
-                <i className="fa fa-envelope"></i>
+                <i className="bi bi-envelope"></i>
                 <h5>muhammadelkufahn27@gmail.com</h5>
               </li>
               <li>
-                <i className="fa fa-location"></i>
+                <i className="bi bi-geo-alt"></i>
                 <h5>Abuja, Nigeria</h5>
               </li>
             </ul>
@@ -36,22 +35,22 @@ const Contacts = () => {
             <ul className="contact_socials">
               <li>
                 <a href="#">
-                  <i className="fa-brands fa-facebook"></i>
+                  <i className="bi bi-facebook"></i>
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <i className="fa-brands fa-instagram"></i>
+                  <i className="bi bi-instagram"></i>
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <i className="fa-brands fa-twitter"></i>
+                  <i className="bi bi-twitter"></i>
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <i className="fa-brands fa-linkedin"></i>
+                  <i className="bi bi-linkedin"></i>
                 </a>
               </li>
             </ul>

@@ -55,30 +55,29 @@ const Footer = () => {
           <ul className="footer_socials">
             <li>
               <a href="#">
-                <i className="fa-brands fa-facebook"></i>
+                <i className="bi bi-facebook"></i>
               </a>
             </li>
             <li>
               <a href="#">
-                <i className="fa-brands fa-instagram"></i>
+                <i className="bi bi-instagram"></i>
               </a>
             </li>
             <li>
               <a href="#">
-                <i className="fa-brands fa-twitter"></i>
+                <i className="bi bi-twitter"></i>
               </a>
             </li>
             <li>
               <a href="#">
-                <i className="fa-brands fa-linkedin"></i>
+                <i className="bi bi-linkedin"></i>
               </a>
             </li>
           </ul>
         </div>
-
-        <div className="footer_copyright">
-          <small>Copy &copy; El-kufahn's Website</small>
-        </div>
+      </div>
+      <div className="footer_copyright">
+        <small>Copy &copy; El-kufahn's Website</small>
       </div>
       <Outlet />
     </footer>

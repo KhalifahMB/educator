@@ -1,99 +1,51 @@
-const Testimonials = () => {
+// import Testimonial from "./articles/TestimonialArticle";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+
+const Testimonials = (props) => {
+  const element = props.testimonial;
+  const elements = element.map((el) => {
+    return (
+      <SwiperSlide ke>
+        <article className="testimonial swiper-slide">
+          <div className="avatar">
+            <img src={el.src} alt="" />
+          </div>
+          <div className="testimonial_info">
+            <h5>{el.details}</h5>
+            <small>{el.role}</small>
+          </div>
+          <div className="testimonial_body">
+            <p>{el.body}</p>
+          </div>
+        </article>
+      </SwiperSlide>
+    );
+  });
   return (
-    <section class="container testimonials_container swiper mySwiper">
+    <section className="container testimonials_container swiper mySwiper">
       <h2>Student's Testimonials </h2>
-      <div class="swiper-wrapper">
-        <article class="testimonial swiper-slide">
-          <div class="avatar">
-            <img src="./images/avatar1.jpg" alt="" />
-          </div>
-          <div class="testimonial_info">
-            <h5>Diana Ayi</h5>
-            <small>Student</small>
-          </div>
-          <div class="testimonial_body">
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
-              incidunt, reprehenderit harum quo odit possimus, non cum
-              cupiditate quas, suscipit quam animi labore accusamus perferendis
-              perspiciatis corporis nemo ratione ullam.
-            </p>
-          </div>
-        </article>
-
-        <article class="testimonial swiper-slide">
-          <div class="avatar">
-            <img src="./images/avatar2.jpg" alt="" />
-          </div>
-          <div class="testimonial_info">
-            <h5>Ernest Achiever </h5>
-            <small>Web Developer</small>
-          </div>
-          <div class="testimonial_body">
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
-              incidunt, reprehenderit harum quo odit possimus, non cum
-              cupiditate quas, suscipit quam animi labore accusamus perferendis
-              perspiciatis corporis nemo ratione ullam.
-            </p>
-          </div>
-        </article>
-
-        <article class="testimonial swiper-slide">
-          <div class="avatar">
-            <img src="./images/avatar3.jpg" alt="" />
-          </div>
-          <div class="testimonial_info">
-            <h5>Edem Quist</h5>
-            <small>Student</small>
-          </div>
-          <div class="testimonial_body">
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
-              incidunt, reprehenderit harum quo odit possimus, non cum
-              cupiditate quas, suscipit quam animi labore accusamus perferendis
-              perspiciatis corporis nemo ratione ullam.
-            </p>
-          </div>
-        </article>
-
-        <article class="testimonial swiper-slide">
-          <div class="avatar">
-            <img src="./images/avatar4.jpg" alt="" />
-          </div>
-          <div class="testimonial_info">
-            <h5>Hajiya Bintu</h5>
-            <small>Student</small>
-          </div>
-          <div class="testimonial_body">
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
-              incidunt, reprehenderit harum quo odit possimus, non cum
-              cupiditate quas, suscipit quam animi labore accusamus perferendis
-              perspiciatis corporis nemo ratione ullam.
-            </p>
-          </div>
-        </article>
-
-        <article class="testimonial swiper-slide">
-          <div class="avatar">
-            <img src="./images/avatar5.jpg" alt="" />
-          </div>
-          <div class="testimonial_info">
-            <h5>Jane Doe </h5>
-            <small>Student</small>
-          </div>
-          <div class="testimonial_body">
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
-              incidunt, reprehenderit harum quo odit possimus, non cum
-              cupiditate quas, suscipit quam animi labore accusamus perferendis
-              perspiciatis corporis nemo ratione ullam.
-            </p>
-          </div>
-        </article>
+      <div className="swiper-wrapper">
+        <Swiper
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={30}
+          slidesPerView={2}
+          navigation={true}
+          pagination={{ clickable: true }}
+          scrollbar={{ draggable: true }}
+          onSlideChange={() => console.log("slide change")}
+          onSwiper={(Swiper) => console.log(Swiper)}
+          className="my-swiper"
+        >
+          {elements}
+          ...
+        </Swiper>
       </div>
-      <div class="swiper-pagination"></div>
+      <div className="swiper-pagination"></div>
     </section>
   );
 };

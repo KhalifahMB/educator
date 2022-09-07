@@ -1,10 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
+import { Outlet, Link } from "react-router-dom";
 const Footer = () => {
   return (
-    <footer class="footer">
-      <div class="container footer_container">
-        <div class="footer_1">
-          <a href="index.html" class="footer_logo">
+    <footer className="footer">
+      <div className="container footer_container">
+        <div className="footer_1">
+          <a href="index.html" className="footer_logo">
             <h4>EL-KUFAHN</h4>
           </a>
           <p>
@@ -13,27 +14,27 @@ const Footer = () => {
           </p>
         </div>
 
-        <div class="footer_2">
+        <div className="footer_2">
           <h4>Permalinks</h4>
-          <ul class="permalinks">
+          <ul className="permalinks">
             <li>
-              <a href="index.html">Home</a>
+              <Link to="/main">Home</Link>
             </li>
             <li>
-              <a href="about.html">About</a>
+              <Link to="/about">About</Link>
             </li>
             <li>
-              <a href="courses.html">Courses</a>
+              <Link to="/courses">Courses</Link>
             </li>
             <li>
-              <a href="contact.html">Contact</a>
+              <Link to="/contacts">Contacts</Link>
             </li>
           </ul>
         </div>
 
-        <div class="footer_3">
+        <div className="footer_3">
           <h4>Privacy</h4>
-          <ul class="privacy">
+          <ul className="privacy">
             <li>
               <a href="#">Privacy Policy</a>
             </li>
@@ -46,39 +47,40 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div class="footer_4">
+        <div className="footer_4">
           <h4>Contact Us</h4>
           <p>08025378442</p>
           <p>muhammadelkufahn27@gmail.com</p>
 
-          <ul class="footer_socials">
+          <ul className="footer_socials">
             <li>
               <a href="#">
-                <i class="fa-brands fa-facebook"></i>
+                <i className="fa-brands fa-facebook"></i>
               </a>
             </li>
             <li>
               <a href="#">
-                <i class="fa-brands fa-instagram"></i>
+                <i className="fa-brands fa-instagram"></i>
               </a>
             </li>
             <li>
               <a href="#">
-                <i class="fa-brands fa-twitter"></i>
+                <i className="fa-brands fa-twitter"></i>
               </a>
             </li>
             <li>
               <a href="#">
-                <i class="fa-brands fa-linkedin"></i>
+                <i className="fa-brands fa-linkedin"></i>
               </a>
             </li>
           </ul>
         </div>
 
-        <div class="footer_copyright">
+        <div className="footer_copyright">
           <small>Copy &copy; El-kufahn's Website</small>
         </div>
       </div>
+      <Outlet />
     </footer>
   );
 };

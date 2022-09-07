@@ -29,7 +29,7 @@ const Navbar = () => {
   return (
     <nav>
       <div className="container nav_container">
-        <Link to="main">
+        <Link to="/">
           <h4>EL-KUFAHN </h4>
         </Link>
 

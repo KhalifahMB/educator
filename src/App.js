@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Err from "./routes/Err";
 import Main from "./routes/Main";
 import About from "./routes/about";
 import Courses from "./routes/courses";

@@ -38,7 +38,7 @@ const Testimonials = (props) => {
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
           onSlideChange={() => console.log("slide change")}
-          onSwiper={(Swiper) => console.log(Swiper)}
+          // onSwiper={(Swiper) => console.log(Swiper)}
           className="my-swiper"
         >
           {elements}

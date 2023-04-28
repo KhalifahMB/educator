@@ -9,7 +9,6 @@ import Footer from "../components/Footer";
 import { Outlet } from "react-router-dom";
 
 const Main = (props) => {
-  console.log("props main", props);
   //  categories
   const [categories, setCategories] = React.useState([]);
   React.useEffect(() => {

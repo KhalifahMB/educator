@@ -97,8 +97,9 @@ img {
 
 .btn:hover {
   background-color: transparent;
-  color: var(--color-white);
+  /* color: var(--color-white); */
   border-color: var(--color-white);
+  color: red;
 }
 
 .btn-primary {
@@ -461,6 +462,11 @@ footer ul li a:hover {
 
   nav button#close-menu-btn {
     display: none;
+  }
+
+  nav button:hover ~ .nav_menu {
+    display: flex;
+    background-color: red;
   }
 
   .nav_menu {
